@@ -1,0 +1,40 @@
+#include "core.h"
+
+
+void run_advent_day_puzzles(int day, int puzzle) {
+	switch(day) {
+		case 1:
+			if (puzzle == 1)
+				execute_day1_puzzle_1();
+			else if (puzzle == 2)
+				execute_day1_puzzle_2();
+			break;
+		case 2:
+			if (puzzle == 1)
+				execute_day2_puzzle_1();
+			else if (puzzle == 2)
+				execute_day2_puzzle_2();
+			break;
+	}
+
+}
+
+void set_integer_value(char* strSource, int** intDest) {
+	if (strSource == NULL)
+		return;
+
+	int swapInt;
+
+	*intDest = malloc(sizeof(int)*strlen(strSource) + 4);
+	if (*intDest == NULL) {
+		// error allocating
+		// handle this
+		return;
+	}
+
+	printf("\nGot source string from input: %s\n----------------\n", strSource);
+
+	swapInt = atoi(strSource);
+	*intDest = &swapInt;
+	//strcpy(*strDest, strSource);
+}
