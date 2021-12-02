@@ -1,6 +1,5 @@
 #include "core.h"
 
-
 void run_advent_day_puzzles(int day, int puzzle) {
 	switch(day) {
 		case 1:
@@ -33,8 +32,6 @@ void set_integer_value(char* strSource, int** intDest) {
 		// handle this
 		return;
 	}
-
-	printf("\nGot source string from input: %s\n----------------\n", strSource);
 
 	swapInt = atoi(strSource);
 	*intDest = &swapInt;

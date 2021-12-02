@@ -13,12 +13,9 @@ int main (int argc, char **argv){
 	while ((opt = getopt(argc, argv, "gd:p:")) != -1) {
 		switch (opt) {
 			case 'd':
-				printf("Calling Set Integer Value with value: %s\n", optarg);
-				//set_integer_value(optarg, &day);
 				day = atoi(optarg);
 				break;
 			case 'p':
-				printf("Calling Set Integer Value with value: %s\n", optarg);
 				puzzle = atoi(optarg);
 				break;
 			case 'g':
